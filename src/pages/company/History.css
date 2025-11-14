@@ -1,0 +1,134 @@
+.history-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgb(16, 20, 29);
+  background-image: url("/public/bg-roadmap.png");
+  color: wheat
+}
+
+.timeline-title {
+  color: var(--ref-hero-text)
+}
+
+.background-hist {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(16, 20, 29);
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.history-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.wp-logo {
+  width: 80vw;
+  height: auto;
+  margin-top: 6vw;
+}
+
+.timeline-item {
+  font-family: 'Arial', sans-serif;
+}
+
+.timeline-item h3 {
+  font-size: 1.7rem;
+}
+
+.vertical-timeline-element-icon {
+  background: rgb(255, 72, 124) !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 20px solid transparent;
+  border-right: 30px solid #fff;
+}
+
+.vertical-timeline-element-content {
+  background: transparent !important;
+  color: wheat !important;
+  border: 2px solid white !important;
+  border-radius: 10px !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+}
+
+.vertical-timeline-element::after {
+  border-left: 5px solid transparent;
+  background: linear-gradient(to bottom, #ff6347, #ffa07a);
+}
+
+.timeline-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timeline-list li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: wheat;
+  font-size: 1.5rem;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  float: left !important;
+  padding: .8em 0 !important;
+  font-size: 2rem !important;
+  opacity: .9 !important;
+  font-weight: bold !important;
+  color: wheat;
+}
+
+@media (max-width: 1024px) {
+  .timeline-content h2 {
+    font-size: 8vw;
+  }
+
+  .timeline-content ul li {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-content h2 {
+    font-size: 10vw;
+  }
+
+  .timeline-content ul li {
+    font-size: 5vw;
+  }
+
+  .vertical-timeline-element-icon {
+    background: rgb(255, 72, 124) !important;
+    color: #fff !important;
+    visibility: hidden !important;
+  }
+
+  .history-page {
+    padding: 8vh 0;
+    top: 7vh;
+  }
+}

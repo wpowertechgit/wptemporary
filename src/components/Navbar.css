@@ -1,0 +1,8 @@
+.navbar {
+    position: fixed;  /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep it on top of everything */
+    background-color: white; /* Optional: add background for visibility */
+  }

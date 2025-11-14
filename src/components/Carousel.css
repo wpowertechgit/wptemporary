@@ -1,0 +1,29 @@
+.carousel-control {
+    background: rgba(0, 0, 0, 0.6); /* Transparent background */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-control.left {
+    left: 1vw; /* Adjust as needed */
+  }
+  
+  .carousel-control.right {
+    right: 2vw; /* Adjust as needed */
+  }
+  
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+

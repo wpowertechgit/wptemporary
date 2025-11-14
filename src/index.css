@@ -1,0 +1,21 @@
+/* HARD RESET — removes all browser defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  
+}
+.MuiContainer-root {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

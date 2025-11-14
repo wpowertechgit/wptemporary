@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Interphases:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TT+Autonomous:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+    font-family: 'Roboto', 'Interphases', 'TT Autonomous', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 100%;
+}
+.App {
+text-align: center;}
+.about-section {
+position: relative;
+width: 100vw;
+height: 100vh;}
+.overlay {
+position: relative;
+width: 100%;
+height: 100%;}
+.background-image img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+filter: blur(5px);
+}
+.about-image {
+position: relative;
+z-index: 1;
+}
+.about-image img {
+max-width: 80%;
+height: auto;
+z-index: 2;
+position: relative;
+display: block;
+margin: 0 auto;
+}
+.news-section {
+padding: 1vw;
+background-color: #ffffff;
+text-align: center;
+color: rgb(0, 0, 0);
+box-shadow: 0 3vw 5vw rgba(0, 0, 0, 0.8);
+position: relative;
+width: 70vw;
+height: 10vw;}
+.facebook-feed {
+display: flex;
+gap: 20px;
+overflow-x: auto;}
+.facebook-post {
+background-color: white;
+border-radius: 1vw;
+overflow: hidden;
+padding: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+min-height: 10vw;}
+.facebook-post img
+{
+width: 30%;
+height: auto;}
+.inbet {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;}
+.inbet iframe {
+width: 80%;
+height: 80%;}
+.overlay {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+padding: 20px;
+text-align: center;}
+.about-section .overlay h1 {
+font-size: 4rem;}
+.button-container-tech {
+position: absolute;
+right: 150px;
+bottom: 20px;
+transform: translateY(-50%);
+display: flex;
+align-items: center;}
+.technology-section iframe {
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.7);}
+.technology-section .overlay {
+    background: rgba(255, 255, 255, 0.43);
+    padding: 2vw 2vw;
+    z-index: 2;}
+.learn-more {
+padding: 20px 40px;
+border: 2px solid #005ab9;
+background-color: #005ab9;
+color: #fff;
+text-decoration: none;
+border-radius: 10px;
+font-size: 1.5rem;
+transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;}
+.learn-more:hover {
+background-color: #0056b3;
+transform: scale(1.1);}
+.arrow {
+width: 100px;
+height: 100px;
+color: blue;
+opacity: 0.8;
+margin-right: 15px;}
+.footer-content {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+gap: 150px;
+flex-wrap: wrap;
+background-color: #4CAF50;}
+.location-container,
+.contact-details {
+display: flex;
+flex-direction: column;
+align-items: flex-start;}
+.location-container p,
+.contact-details p {
+display: flex;
+align-items: center;
+margin: 0 0 10px 0;
+text-align: left;
+color: white;
+text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5)}
+.location-container a,
+.contact-details a {
+display: flex;
+align-items: center;
+margin: 0 0 10px 0;
+text-align: left;
+color: white;
+text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5)}
+.contact-details p svg {
+margin-right: 10px;}
+.location-container h2,
+.contact-details h2 {
+margin: 0 0 10px 0;
+text-align: left;
+color: white;
+font-size: 2rem;
+text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);}
+@media (max-width: 1024px) {
+
+.button-container-tech {
+right: 30px;}
+.arrow {
+width: 60px;
+height: 60px;
+margin-right: 10px;}
+.technology-section iframe {
+    width: 80%;
+    height: 25%;}
+.learn-more {
+padding: 10px 20px;
+font-size: 2rem;}
+.footer-content {
+padding-top: 10px;}
+.facebook-post img
+{
+width: 70%;
+height: auto;}}
+@media (max-width: 480px) {
+.about-image img {
+        max-width: 100%;
+        margin-left: -5%;}
+.navbar {
+font-size: 1rem;
+padding: 8px 10px;}
+.inbet iframe {
+width: 100%;
+height:70%  ;}
+.nav-links {
+flex-direction: column;
+gap: 5px;}
+.nav-links li a {
+padding: 4px 8px;}
+.arrow {
+width: 100px;
+height: 100px;
+margin-right: 10px;}
+.button-container-tech {
+right: 10vw;
+bottom: 5vw;}
+.technology-section iframe {
+    width: 90%;
+    height: 30%;}
+.facebook-post {
+min-width: 90%;}
+.footer-content {
+text-align: center;}
+.location-container,
+.contact-details {
+align-items: center;}
+.location-container iframe {
+margin-top: -15px;}
+.lang-container {
+position: absolute;
+right: 10px;}
+.facebook-post img
+{
+width: 80%;
+height: auto;}}

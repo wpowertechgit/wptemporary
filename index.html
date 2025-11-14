@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Waste Powertech - Energy from waste with 0 CO2 emissions">
+  <meta name="keywords"
+    content="Waste Powertech, renewable energy, waste ,wp 1000, wp1000 ,wp1000,wp1000 ,zero emissions,Waste Powertech SRL,waste-to-energy, sustainability, eco-friendly technology, waste management, clean energy solutions, molecular disintegration, pyrolysis, circular economy, zero CO2 emissions, SynGas production, gasification, energy efficiency, green jobs, ecosystem protection, renewable energy transition, low-carbon economy, waste power, energy from waste, green energy">
+  <meta name="author" content="Waste Powertech">
+  <meta name="robots" content="index, follow">
+  <meta property="og:url" content="https://wpowertech.ro/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Waste Powertech - Energy from waste">
+  <meta property="og:description" content="Waste Powertech - Energy from waste with 0 CO2 emissions.">
+  <meta property="og:image" content="/logo192.png">
+  <meta property="og:site_name" content="Waste Powertech">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Interphases:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="apple-touch-icon" href="/logo192.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TT+Autonomous:wght@400;700&display=swap">
+
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    html,
+    body,
+    #root {
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
+      box-sizing: border-box;
+      background: url('/bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #000;
+      font-family: 'Roboto', 'Interphases', 'TT Autonomous', sans-serif !important;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ======================================== */
+    /*                 THEME SYSTEM             */
+    /* ======================================== */
+
+    :root {
+      /* Base colors (default theme / your current theme) */
+      --navbar-bg: #004d00;
+      --navbar-hover-bg: #004d00;
+
+      --text-color: #ffffff;
+      --text-hover-color: #b3e6ff;
+
+      --dropdown-bg: #018a13;
+      --dropdown-hover-bg: #003808;
+      --dropdown-border: #005a30;
+
+      --nav-li-hover-bg: rgb(4, 60, 0);
+
+      --lang-hover-bg: #003808;
+
+      --dropdown-arrow-color: rgb(0, 60, 23);
+      --section-triangle: #00c46b;
+      --section-triangle-hover: #00e07d;
+
+      --section-accent-start: rgba(255, 255, 255, 0.7);
+      --section-accent-end: rgba(255, 255, 255, 0.2);
+      /*Home Page colors*/
+      --page-bg: #000000;
+      --page-text: #e6e6e6;
+      /* SECTION BACKGROUND */
+      --section-bg-1: #f8f9fa;
+      --section-bg-2: #003a1c;
+
+      /* TEXT COLORS */
+      --heading-color: #0c1e35;
+      --subheading-color: #ddd;
+
+      /* NEWS CARD COLORS */
+      --card-bg: #ffffff;
+      --card-text: #111111;
+      --card-border: #e0e0e0;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+      --card-hover-scale: 1.05;
+
+      /* LINKS + BUTTONS */
+      --btn-primary-bg: #1190ff;
+      --btn-primary-bg-hover: #0b73d9;
+      --btn-primary-text: #ffffff;
+      --btn-primary-shadow: rgba(17, 144, 255, 0.3);
+      --btn-primary-shadow-hover: rgba(17, 144, 255, 0.45);
+
+      /* TECHNOLOGY SECTION COLORS */
+      --tech-bg: #003a1c;
+      --tech-title: #00ff90;
+      --tech-text: #ffffff;
+      --tech-btn-bg: #00b85c;
+      --tech-btn-bg-hover: #00994a;
+      /* FOOTER COLORS */
+      --footer-bg: #4CAF50;
+      --footer-text: #ffffff;
+      --footer-link-hover: #dfffe8;
+      --footer-opacity: 0.9;
+      /* Certificates */
+      --cert-banner-bg1: #1190ff;
+      --cert-banner-bg2: #114dff;
+      --cert-banner-text: #ffffff;
+      /*References Section*/
+      --ref-hero-text: wheat;
+      --ref-button-bg: rgba(255, 255, 0, 0.3);
+      --ref-button-gradient: linear-gradient(to bottom, rgba(222, 196, 0, 0), rgba(222, 196, 0, 1));
+      --ref-button-hover: rgba(164, 145, 0, 0.3);
+
+      --ref-content-bg: #ffffff;
+      --ref-content-text: #000000;
+      --ref-content-border: #fff200;
+
+      --ref-titlebar-bg: #fff200;
+      --ref-titlebar-text: black;
+
+      --ref-gallery-shadow: rgba(0, 0, 0, 0.3);
+      /*Teams*/
+      --team-bg-main1: #004b13;
+      --team-bg-main2: #007708;
+
+      --team-bg-pattern:
+        radial-gradient(circle farthest-side at 0% 50%, var(--team-bg-main1) 23.5%, transparent 0)21px 30px,
+        radial-gradient(circle farthest-side at 0% 50%, var(--team-bg-main2) 24%, transparent 0)19px 30px,
+        linear-gradient(var(--team-bg-main1) 14%, transparent 0, transparent 85%, var(--team-bg-main1) 0)0 0,
+        linear-gradient(150deg, var(--team-bg-main1) 24%, var(--team-bg-main2) 0, var(--team-bg-main2) 26%, transparent 0, transparent 74%, var(--team-bg-main2) 0, var(--team-bg-main2) 76%, var(--team-bg-main1) 0)0 0,
+        linear-gradient(30deg, var(--team-bg-main1) 24%, var(--team-bg-main2) 0, var(--team-bg-main2) 26%, transparent 0, transparent 74%, var(--team-bg-main2) 0, var(--team-bg-main2) 76%, var(--team-bg-main1) 0)0 0,
+        linear-gradient(90deg, var(--team-bg-main2) 2%, var(--team-bg-main1) 0, var(--team-bg-main1) 98%, var(--team-bg-main2) 0%)0 0 var(--team-bg-main1);
+
+      --team-main-title: white;
+      --team-member-bg: #004b13;
+      --team-member-text: white;
+      --team-member-desc: #d3d3d3;
+      /*Contact Section*/
+      --contact-page-bg: url("/bg-contact.jpg");
+      /* your current background */
+      --contact-page-bg-color: white;
+
+      --contact-box-bg: rgb(235, 235, 235);
+      --contact-box-text: black;
+
+      --contact-accent: rgb(0, 113, 15);
+      --contact-link: #007bff;
+      --contact-link-hover: #0056b3;
+
+      --contact-svg: black;
+    }
+
+    /* LIGHT THEME */
+    :root[data-theme="light"] {
+      --navbar-bg: #ffffff;
+      --navbar-hover-bg: #e8e8e8;
+
+      --text-color: #111111;
+      --text-hover-color: #222222;
+
+      --dropdown-bg: #f1f1f1;
+      --dropdown-hover-bg: #dcdcdc;
+      --dropdown-border: #c5c5c5;
+
+      --nav-li-hover-bg: #e6e6e6;
+
+      --lang-hover-bg: #dcdcdc;
+
+      --dropdown-arrow-color: #555555;
+      /*Section Colors*/
+      --section-triangle: #bababa;
+      /* soft green or light gray */
+      --section-triangle-hover: #5d5d5d;
+
+      --section-accent-start: rgba(0, 0, 0, 0.5);
+      --section-accent-end: rgba(0, 0, 0, 0.15);
+      /*Home Page colors*/
+      /* Page background + text */
+      --page-bg: #fafafa;
+      --page-text: #1a1a1a;
+
+      /* Section backgrounds */
+      --section-bg-1: #ffffff;
+      --section-bg-2: #e8f6ee;
+      /* soft mint tint – gentle & pleasant */
+
+      /* Headings */
+      --heading-color: #0a2442;
+      --subheading-color: #444444;
+
+      /* Technology section */
+
+      --tech-bg: #ffffff;
+      --tech-title: #2f2f2f;
+      --tech-text: #000000;
+      --tech-btn-bg: #494949;
+      --tech-btn-bg-hover: #232323;
+
+      /* Cards */
+      --card-bg: #ffffff;
+      --card-text: #1a1a1a;
+      /* used for section texts */
+      --card-border: #d0d0d0;
+      --card-shadow: rgba(0, 0, 0, 0.06);
+      --card-hover-scale: 1.03;
+
+      /* Buttons */
+      --btn-primary-bg: #0d6efd;
+      --btn-primary-bg-hover: #0a58ca;
+      --btn-primary-text: #ffffff;
+      --btn-primary-shadow: rgba(13, 110, 253, 0.2);
+      --btn-primary-shadow-hover: rgba(13, 110, 253, 0.35);
+
+      /* FOOTER COLORS */
+      --footer-bg: #e0e0e0;
+      --footer-text: #000000;
+      --footer-link-hover: #0077cc;
+      --footer-opacity: 0.8;
+      /* Certificates */
+      --cert-banner-bg1: #0d6efd;
+      --cert-banner-bg2: #0a58ca;
+      --cert-banner-text: #ffffff;
+      /*References Section*/
+      --ref-hero-text: #0a2442;
+      --ref-button-bg: rgba(0, 132, 255, 0.15);
+      --ref-button-gradient: linear-gradient(to bottom, rgba(0, 132, 255, 0), rgba(0, 132, 255, 0.4));
+      --ref-button-hover: rgba(0, 132, 255, 0.25);
+      --ref-content-bg: #ffffff;
+      --ref-content-text: #1a1a1a;
+      --ref-content-border: #0d6efd;
+      --ref-titlebar-bg: #0d6efd;
+      --ref-titlebar-text: white;
+      --ref-gallery-shadow: rgba(0, 0, 0, 0.15);
+      /*Teams*/
+      --team-bg-main1: #b9e9fc;
+      --team-bg-main2: #d9e6ff;
+      --team-bg-pattern:
+        linear-gradient(135deg, var(--team-bg-main1) 0%, var(--team-bg-main2) 100%);
+      --team-main-title: #0f172a;
+      --team-member-bg: #ffffff;
+      --team-member-text: #1e293b;
+      --team-member-desc: #475569;
+      /*Contact Section*/
+      --contact-page-bg: url("/bg-contact.jpg");
+      --contact-page-bg-color: #f7f7f7;
+
+      --contact-box-bg: #ffffff;
+      --contact-box-text: #1e293b;
+      --contact-accent: #bababa;
+      --contact-link: #0a58ca;
+      --contact-link-hover: #084298;
+      --contact-svg: #334155;
+    }
+
+    /* DARK THEME */
+    :root[data-theme="dark"] {
+      --navbar-bg: #000000;
+      --navbar-hover-bg: #111111;
+
+      --text-color: #ffffff;
+      --text-hover-color: #cccccc;
+
+      --dropdown-bg: #111111;
+      --dropdown-hover-bg: #222222;
+      --dropdown-border: #333333;
+
+      --nav-li-hover-bg: #222222;
+
+      --lang-hover-bg: #222222;
+
+      --dropdown-arrow-color: #444444;
+      /*Section Colors*/
+      --section-triangle: #0d0d0d;
+      /* deep dark gray */
+      --section-triangle-hover: #1a1a1a;
+
+      --section-accent-start: rgba(255, 255, 255, 0.5);
+      --section-accent-end: rgba(255, 255, 255, 0.15);
+      /*Home Page colors*/
+      /* Page + text */
+      --page-bg: #0a0a0a;
+      --page-text: #e6e6e6;
+
+      /* Section backgrounds */
+      --section-bg-1: #111111;
+      --section-bg-2: #3b3b3b;
+      /* deep green tint */
+
+      /* Headings */
+      --heading-color: #c7e7ff;
+      /* soft light blue */
+      --subheading-color: #cccccc;
+
+      /* Technology section */
+      --tech-bg: #000000;
+      --tech-title: #ffffff;
+      --tech-text: #e6e6e6;
+      --tech-btn-bg: #2c2c2c;
+      --tech-btn-bg-hover: #878787;
+
+      /* Cards */
+      --card-bg: #1a1a1a;
+      --card-text: #e9e9e9;
+      --card-border: #2c2c2c;
+      --card-shadow: rgba(0, 0, 0, 0.25);
+      --card-hover-scale: 1.04;
+
+      /* Buttons */
+      --btn-primary-bg: #5a5a5a;
+      --btn-primary-bg-hover: #a5a5a5;
+      --btn-primary-text: #ffffff;
+      --btn-primary-shadow: rgba(237, 237, 237, 0.25);
+      --btn-primary-shadow-hover: rgba(212, 212, 212, 0.4);
+      /* FOOTER COLORS */
+      --footer-bg: #000000;
+      --footer-text: #ffffff;
+      --footer-link-hover: #6ab8ff;
+      --footer-opacity: 0.8;
+      /*Certificates Section*/
+      --cert-banner-bg1: #2b2b2b;
+      --cert-banner-bg2: #000000;
+      --cert-banner-text: #ffffff;
+      /*References Section*/
+      --ref-hero-text: #e6e6e6;
+      --ref-button-bg: rgba(17, 144, 255, 0.1);
+      --ref-button-gradient: linear-gradient(to bottom, rgba(17, 144, 255, 0), rgba(17, 144, 255, 0.35));
+      --ref-button-hover: rgba(17, 144, 255, 0.2);
+
+      --ref-content-bg: #121212;
+      --ref-content-text: #e6e6e6;
+      --ref-content-border: #1e90ff;
+
+      --ref-titlebar-bg: #1e90ff;
+      --ref-titlebar-text: white;
+
+      --ref-gallery-shadow: rgba(0, 0, 0, 0.35);
+      /*Teams*/
+      --team-bg-main1: #0a0f1a;
+      --team-bg-main2: #101a2b;
+
+      --team-bg-pattern:
+        radial-gradient(circle farthest-side at 0% 50%, var(--team-bg-main1) 23.5%, transparent 0)21px 30px,
+        radial-gradient(circle farthest-side at 0% 50%, var(--team-bg-main2) 24%, transparent 0)19px 30px,
+        linear-gradient(var(--team-bg-main1) 14%, transparent 0, transparent 85%, var(--team-bg-main1) 0)0 0,
+        linear-gradient(150deg, var(--team-bg-main1) 24%, var(--team-bg-main2) 0, var(--team-bg-main2) 26%, transparent 0, transparent 74%, var(--team-bg-main2) 0, var(--team-bg-main2) 76%, var(--team-bg-main1) 0)0 0,
+        linear-gradient(30deg, var(--team-bg-main1) 24%, var(--team-bg-main2) 0, var(--team-bg-main2) 26%, transparent 0, transparent 74%, var(--team-bg-main2) 0, var(--team-bg-main2) 76%, var(--team-bg-main1) 0)0 0,
+        linear-gradient(90deg, var(--team-bg-main2) 2%, var(--team-bg-main1) 0, var(--team-bg-main1) 98%, var(--team-bg-main2) 0%)0 0 var(--team-bg-main1);
+
+
+      --team-main-title: #e2e8f0;
+      --team-member-bg: #101a2b;
+      --team-member-text: #e2e8f0;
+      --team-member-desc: #94a3b8;
+      /*Contact Section*/
+      --contact-page-bg: none;
+      /* no background image */
+      --contact-page-bg-color: #000000;
+      /* solid black */
+
+      --contact-box-bg: #272727;
+      --contact-box-text: #e2e8f0;
+
+      --contact-accent: #161616;
+      /* bright blue strip */
+
+      --contact-link: #38bdf8;
+      --contact-link-hover: #0ea5e9;
+
+      --contact-svg: #bae6fd;
+
+    }
+  </style>
+  <title>Waste Powertech</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
