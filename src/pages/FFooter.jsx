@@ -23,29 +23,22 @@ const FFooter = () => {
       <Grid2
         container
         spacing={4}
-        justifyContent={{ xs: 'center', md: 'space-between' }}
-        alignItems="center"
         sx={{
           maxWidth: '1200px',
           width: '100%',
           margin: 'auto',
           px: { xs: 2, md: 0 },
-          textAlign: { xs: 'center', md: 'left' },
-          flexDirection: { xs: 'column', md: 'row' }, //
         }}
       >
         {/* Left: Contact info */}
         <Grid2
-          item
-          xs={12}
-          md={4}
+          size={{ xs: 12, md: 4 }}
           sx={{
             pl: { xs: 0, md: 20 },
             display: 'flex',
             flexDirection: 'column',
             alignItems: { xs: 'center', md: 'flex-start' },
             textAlign: { xs: 'center', md: 'left' },
-            mb: { xs: 2, md: 0 },
           }}
         >
           <Typography
@@ -57,7 +50,7 @@ const FFooter = () => {
           <Typography sx={{ color: 'var(--footer-text)', mt: '0.25rem' }}>
             SC Waste Powertech SRL
           </Typography>
-          <Typography sx={{ color: 'var(--footer-text)', mt: '0.25rem' }}>
+          <Typography sx={{ color: 'var(--footer-text)', mt: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <FaEnvelope /> office@wpowertech.ro
           </Typography>
           <Link
@@ -68,6 +61,9 @@ const FFooter = () => {
               fontSize: '1rem',
               textDecoration: 'none',
               opacity: 'var(--footer-opacity)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
             }}
           >
@@ -81,6 +77,9 @@ const FFooter = () => {
               fontSize: '1rem',
               textDecoration: 'none',
               opacity: 'var(--footer-opacity)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
             }}
           >
@@ -90,14 +89,11 @@ const FFooter = () => {
 
         {/* Center: Map */}
         <Grid2
-          item
-          xs={12}
-          md={4}
+          size={{ xs: 12, md: 4 }}
           sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            mb: { xs: 2, md: 0 },
           }}
         >
           <PrivacyMap />
@@ -105,14 +101,13 @@ const FFooter = () => {
 
         {/* Right: Links */}
         <Grid2
-          item
-          xs={12}
-          md={4}
+          size={{ xs: 12, md: 4 }}
           sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: { xs: 'center', md: 'flex-end' },
             pr: { xs: 0, md: 8 },
+            gap: '0.5rem',
           }}
         >
           <Link
@@ -124,6 +119,7 @@ const FFooter = () => {
               textDecoration: 'none',
               opacity: 'var(--footer-opacity)',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
+              wordBreak: 'break-word',
             }}
           >
             {t('accessibility_title')}
@@ -136,9 +132,9 @@ const FFooter = () => {
               fontSize: '1rem',
               textAlign: { xs: 'center', md: 'right' },
               textDecoration: 'none',
-              mt: 0.5,
               opacity: 'var(--footer-opacity)',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
+              wordBreak: 'break-word',
             }}
           >
             {t('privacy_policy_title')}
@@ -151,9 +147,9 @@ const FFooter = () => {
               textAlign: { xs: 'center', md: 'right' },
               fontSize: '1rem',
               textDecoration: 'none',
-              mt: 0.5,
               opacity: 'var(--footer-opacity)',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
+              wordBreak: 'break-word',
             }}
           >
             {t('terms_of_use_title')}
@@ -171,6 +167,7 @@ const FFooter = () => {
           mt: 2,
           fontSize: '0.85rem',
           px: 2,
+          maxWidth: '1200px',
         }}
       >
         {t('cookies')}
