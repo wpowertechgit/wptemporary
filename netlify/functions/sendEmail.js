@@ -45,7 +45,6 @@ exports.handler = async (event) => {
             };
         }
 
-        // ------ BAD WORDS CHECK ------
         const badWords = ["viagra", "casino", "porn", "sex", "nigger", "kys", "faggot", "xxx", "cazino", "pula", "sugeti"
         ];
         if (badWords.some(w => message.toLowerCase().includes(w))) {
