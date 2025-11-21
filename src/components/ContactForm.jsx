@@ -119,7 +119,7 @@ const ContactForm = () => {
                             backgroundColor: "var(--textfield-bg)",
                         },
                         "& .MuiInputBase-input": {
-                            color: "var(--contact-box-text)",
+                            color: "var(--contact-form-text)",
                         }
                     }}
                 />
@@ -137,7 +137,7 @@ const ContactForm = () => {
                             backgroundColor: "var(--textfield-bg)",
                         },
                         "& .MuiInputBase-input": {
-                            color: "var(--contact-box-text)",
+                            color: "var(--contact-form-text)",
                         }
                     }}
                 />
@@ -156,7 +156,7 @@ const ContactForm = () => {
                             backgroundColor: "var(--textfield-bg)",
                         },
                         "& .MuiInputBase-input": {
-                            color: "var(--contact-box-text)",
+                            color: "var(--contact-form-text)",
                         }
                     }}
                 />
