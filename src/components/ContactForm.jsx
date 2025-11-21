@@ -46,7 +46,7 @@ const ContactForm = () => {
             return;
         }
 
-        if (sentCount >= 5) {
+        if (sentCount >= 10) {
             setStatus("limit");
             return;
         }
@@ -195,7 +195,7 @@ const ContactForm = () => {
                             fontSize: "1.1rem"
                         }}
                     >
-                        <IoIosCheckmarkCircle color="green" size={6} /> Message sent successfully!
+                        <IoIosCheckmarkCircle color="green" size={15} /> Message sent successfully!
                     </motion.div>
                 )}
 
@@ -212,7 +212,7 @@ const ContactForm = () => {
                             fontWeight: "600",
                         }}
                     >
-                        <MdError color="red" size={6} /> Something went wrong. Try again later.
+                        <MdError color="red" size={15} /> Something went wrong. Try again later.
                     </motion.div>
                 )}
 
@@ -224,7 +224,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "red" }}
                     >
-                        <IoIosWarning color="black" size={6} /> Please enter a valid email.
+                        <IoIosWarning color="black" size={15} /> Please enter a valid email.
                     </motion.div>
                 )}
 
@@ -236,7 +236,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "red" }}
                     >
-                        <IoIosWarning color="black" size={6} /> Message cannot be empty.
+                        <IoIosWarning color="black" size={15} /> Message cannot be empty.
                     </motion.div>
                 )}
 
@@ -248,7 +248,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "orange" }}
                     >
-                        <IoIosHourglass color="black" size={6} />Cool down! You can send a message every 60 seconds.
+                        <IoIosHourglass color="black" size={15} />Cool down! You can send a message every 60 seconds.
                     </motion.div>
                 )}
 
@@ -260,7 +260,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "orange" }}
                     >
-                        <RiProhibited2Line color="red" size={6} /> You reached the hourly limit (5 messages). Try again later.
+                        <RiProhibited2Line color="red" size={15} /> You reached the hourly limit (5 messages). Try again later.
                     </motion.div>
                 )}
             </AnimatePresence>

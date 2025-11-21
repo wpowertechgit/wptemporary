@@ -11,8 +11,9 @@
 # production
 /build
 build.zip
-
+sendemail.php
 dist.zip
+path.php
 # misc
 .DS_Store
 .env.local
