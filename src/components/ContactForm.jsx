@@ -51,9 +51,8 @@ const ContactForm = () => {
             return;
         }
 
-        // -------- SEND EMAIL via Netlify Function --------
         try {
-            const res = await fetch("https://67wptechdeploy.netlify.app/.netlify/functions/sendEmail", {
+            const res = await fetch("https://wpowertech.ro/sendemail.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -75,7 +74,7 @@ const ContactForm = () => {
             }
 
         } catch (error) {
-            console.error("Netlify function error:", error);
+            console.error("Send email function error:", error);
             setStatus("error");
         }
     };
