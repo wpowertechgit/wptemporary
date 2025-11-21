@@ -1,6 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
+import { IoIosCheckmarkCircle, IoIosWarning, IoIosHourglass } from "react-icons/io";
+import { MdError } from "react-icons/md";
+import { RiProhibited2Line } from "react-icons/ri";
+
 const ContactForm = () => {
     const formRef = useRef();
     const [status, setStatus] = useState(null);
@@ -81,7 +85,7 @@ const ContactForm = () => {
             sx={{
                 width: "100%",
                 maxWidth: "600px",
-                backgroundColor: "var(--contact-box-bg)",
+                backgroundColor: "var(--contact-form-box-bg)",
                 color: "var(--contact-box-text)",
                 padding: "2rem",
                 borderRadius: "10px",
@@ -109,9 +113,14 @@ const ContactForm = () => {
                     label="Your Name"
                     name="user_name"
                     variant="outlined"
-                    sx={{ mb: 2 }}
-                    InputProps={{
-                        style: { color: "var(--contact-box-text)" },
+                    sx={{
+                        mb: 2,
+                        "& .MuiOutlinedInput-root": {
+                            backgroundColor: "var(--textfield-bg)",
+                        },
+                        "& .MuiInputBase-input": {
+                            color: "var(--contact-box-text)",
+                        }
                     }}
                 />
 
@@ -122,9 +131,14 @@ const ContactForm = () => {
                     type="email"
                     required
                     variant="outlined"
-                    sx={{ mb: 2 }}
-                    InputProps={{
-                        style: { color: "var(--contact-box-text)" },
+                    sx={{
+                        mb: 2,
+                        "& .MuiOutlinedInput-root": {
+                            backgroundColor: "var(--textfield-bg)",
+                        },
+                        "& .MuiInputBase-input": {
+                            color: "var(--contact-box-text)",
+                        }
                     }}
                 />
 
@@ -136,9 +150,14 @@ const ContactForm = () => {
                     rows={5}
                     required
                     variant="outlined"
-                    sx={{ mb: 2 }}
-                    InputProps={{
-                        style: { color: "var(--contact-box-text)" },
+                    sx={{
+                        mb: 2,
+                        "& .MuiOutlinedInput-root": {
+                            backgroundColor: "var(--textfield-bg)",
+                        },
+                        "& .MuiInputBase-input": {
+                            color: "var(--contact-box-text)",
+                        }
                     }}
                 />
 
@@ -150,7 +169,7 @@ const ContactForm = () => {
                         backgroundColor: "var(--contact-accent)",
                         color: "white",
                         "&:hover": {
-                            backgroundColor: "#006b0f",
+                            backgroundColor: "var(--contact-link-hover)",
                         },
                     }}
                 >
@@ -177,7 +196,7 @@ const ContactForm = () => {
                             fontSize: "1.1rem"
                         }}
                     >
-                        ✅ Message sent successfully!
+                        <IoIosCheckmarkCircle color="green" size={6} /> Message sent successfully!
                     </motion.div>
                 )}
 
@@ -194,7 +213,7 @@ const ContactForm = () => {
                             fontWeight: "600",
                         }}
                     >
-                        ❌ Something went wrong. Try again later.
+                        <MdError color="red" size={6} /> Something went wrong. Try again later.
                     </motion.div>
                 )}
 
@@ -206,7 +225,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "red" }}
                     >
-                        ⚠️ Please enter a valid email.
+                        <IoIosWarning color="black" size={6} /> Please enter a valid email.
                     </motion.div>
                 )}
 
@@ -218,7 +237,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "red" }}
                     >
-                        ⚠️ Message cannot be empty.
+                        <IoIosWarning color="black" size={6} /> Message cannot be empty.
                     </motion.div>
                 )}
 
@@ -230,7 +249,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "orange" }}
                     >
-                        ⏳ Cool down! You can send a message every 60 seconds.
+                        <IoIosHourglass color="black" size={6} />Cool down! You can send a message every 60 seconds.
                     </motion.div>
                 )}
 
@@ -242,7 +261,7 @@ const ContactForm = () => {
                         exit={{ opacity: 0 }}
                         style={{ marginTop: "15px", color: "orange" }}
                     >
-                        🚫 You reached the hourly limit (5 messages). Try again later.
+                        <RiProhibited2Line color="red" size={6} /> You reached the hourly limit (5 messages). Try again later.
                     </motion.div>
                 )}
             </AnimatePresence>
