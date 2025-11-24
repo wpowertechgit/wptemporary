@@ -91,7 +91,7 @@ const Home = () => {
               lineHeight: 1.2,
               fontSize: { xs: '2rem', md: '2.8rem' },
               '@media (min-width:2000px)': {
-                fontSize: '5rem',
+                fontSize: '3.4rem',
 
               }
             }}
@@ -106,7 +106,7 @@ const Home = () => {
               lineHeight: 1.5,
               fontWeight: 300,
               fontSize: { xs: '1rem', md: '1.2rem' }, '@media (min-width:2160px)': {
-                fontSize: '4rem',
+                fontSize: '2rem',
               },
             }}
           >
