@@ -109,7 +109,25 @@ const NavbarDesktop = () => {
             {/* Language Selector */}
             <div className="lang-container">
                 <button type="button">
-                    <IoLanguage /><MdLanguage />
+                    <Box sx={{
+                        // Base styles for all screens
+                        display: 'flex',
+                        alignItems: 'center',
+                        '& > svg': { // Target both IoLanguage and MdLanguage
+                            fontSize: '2rem',
+                            marginRight: '4px', // Space between the icons
+                        },
+
+                        // Styles for min-width 2000px (Large Monitor/4K)
+                        "@media (min-width: 2000px)": {
+                            '& > svg': {
+                                fontSize: '4rem', // Change size to 4rem
+                            },
+                        }
+                    }}>
+                        <IoLanguage />
+                        <MdLanguage />
+                    </Box>
                 </button>
                 <div className="lang-dropdown">
                     <button type="button" onClick={() => changeLanguage('en')}>
@@ -151,18 +169,29 @@ const NavbarDesktop = () => {
             <Box sx={{ ml: 2 }}>
                 {/* CURRENT THEME BUTTON (click to open menu) */}
                 <IconButton onClick={handleThemeClick}>
-                    <Box sx={{
-                        width: 26,
-                        height: 26,
-                        borderRadius: "50%",
-                        border: "2px solid white",
-                        background:
-                            theme === "default"
-                                ? "linear-gradient(90deg, #013d01 50%, #018a13 50%)"
-                                : theme === "light"
-                                    ? "linear-gradient(90deg, #ffffff 50%, #dcdcdc 50%)"
-                                    : "linear-gradient(90deg, #000000 50%, #333333 50%)"
-                    }} />
+                    <Box
+                        sx={{
+                            // Base styles (applies to all screens, including 1080p)
+                            width: 26,
+                            height: 26,
+                            borderRadius: "50%",
+                            border: "2px solid white",
+
+                            "@media (min-width: 2000px)": {
+                                width: 70, // Increased width
+                                height: 70, // Increased height
+                                border: "3px solid white", // Slightly thicker border for better visibility
+                            },
+
+                            // Background gradient logic remains the same
+                            background:
+                                theme === "default"
+                                    ? "linear-gradient(90deg, #013d01 50%, #018a13 50%)"
+                                    : theme === "light"
+                                        ? "linear-gradient(90deg, #ffffff 50%, #dcdcdc 50%)"
+                                        : "linear-gradient(90deg, #000000 50%, #333333 50%)"
+                        }}
+                    />
                 </IconButton>
 
                 {/* THEME MENU */}

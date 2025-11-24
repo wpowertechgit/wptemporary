@@ -28,6 +28,9 @@ const FFooter = () => {
           width: '100%',
           margin: 'auto',
           px: { xs: 2, md: 0 },
+          '@media (min-width:2300px)': {
+            maxWidth: '2160px',
+          },
         }}
       >
         {/* Left: Contact info */}
@@ -39,18 +42,33 @@ const FFooter = () => {
             flexDirection: 'column',
             alignItems: { xs: 'center', md: 'flex-start' },
             textAlign: { xs: 'center', md: 'left' },
+            '@media (min-width:2000px)': {
+              fontSize: '2rem',
+            },
           }}
         >
           <Typography
             variant="h5"
-            sx={{ color: 'var(--footer-text)', fontWeight: 'bold', mb: '0.5rem' }}
+            sx={{
+              color: 'var(--footer-text)', fontWeight: 'bold', mb: '0.5rem', '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
+            }}
           >
             {t('contact_us')}
           </Typography>
-          <Typography sx={{ color: 'var(--footer-text)', mt: '0.25rem' }}>
+          <Typography sx={{
+            color: 'var(--footer-text)', mt: '0.25rem', '@media (min-width:2000px)': {
+              fontSize: '3rem',
+            },
+          }}>
             SC Waste Powertech SRL
           </Typography>
-          <Typography sx={{ color: 'var(--footer-text)', mt: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Typography sx={{
+            color: 'var(--footer-text)', mt: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem', '@media (min-width:2000px)': {
+              fontSize: '3rem',
+            },
+          }}>
             <FaEnvelope /> office@wpowertech.ro
           </Typography>
           <Link
@@ -64,7 +82,9 @@ const FFooter = () => {
               display: 'flex',
               alignItems: 'center',
               gap: '0.5rem',
-              '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
+              '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' }, '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
             }}
           >
             <FaFacebook /> Waste Powertech SRL
@@ -80,7 +100,9 @@ const FFooter = () => {
               display: 'flex',
               alignItems: 'center',
               gap: '0.5rem',
-              '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
+              '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' }, '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
             }}
           >
             <FaYoutube /> Waste Powertech
@@ -120,6 +142,9 @@ const FFooter = () => {
               opacity: 'var(--footer-opacity)',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
               wordBreak: 'break-word',
+              '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
             }}
           >
             {t('accessibility_title')}
@@ -135,6 +160,9 @@ const FFooter = () => {
               opacity: 'var(--footer-opacity)',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
               wordBreak: 'break-word',
+              '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
             }}
           >
             {t('privacy_policy_title')}
@@ -150,6 +178,9 @@ const FFooter = () => {
               opacity: 'var(--footer-opacity)',
               '&:hover': { opacity: 1, color: 'var(--footer-link-hover)' },
               wordBreak: 'break-word',
+              '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
             }}
           >
             {t('terms_of_use_title')}
@@ -168,6 +199,10 @@ const FFooter = () => {
           fontSize: '0.85rem',
           px: 2,
           maxWidth: '1200px',
+          '@media (min-width:2000px)': {
+            maxWidth: '2000px',
+            fontSize: '2.4rem',
+          },
         }}
       >
         {t('cookies')}
@@ -181,6 +216,9 @@ const FFooter = () => {
           mt: 2,
           fontSize: '0.85rem',
           px: 2,
+          '@media (min-width:2000px)': {
+            fontSize: '3rem',
+          },
         }}
       >
         All rights reserved © 2025 Waste Powertech

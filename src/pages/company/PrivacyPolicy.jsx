@@ -36,6 +36,10 @@ const PrivacyPolicy = () => {
           backgroundColor: 'var(--section-bg-1)',
           textAlign: "center",
           boxShadow: "0 0 30px rgba(0,0,0,0.1)",
+          '@media (min-width:2000px)': {
+            pb: "30rem",
+            pt: "30rem"
+          }
         }}
       >
         {renderShapes()}
@@ -69,6 +73,9 @@ const PrivacyPolicy = () => {
             fontWeight: "bold",
             mb: 2,
             color: 'var(--heading-color)',
+            '@media (min-width:2000px)': {
+              fontSize: '5rem',
+            },
           }}
         >
           {t("privacy_policy_title")}
@@ -83,6 +90,10 @@ const PrivacyPolicy = () => {
             margin: "0 auto",
             fontSize: "1.1rem",
             lineHeight: 1.6,
+            '@media (min-width:2000px)': {
+              fontSize: '3rem',
+              maxWidth: '1500px'
+            },
           }}
         >
           {t("privacy_policy_text")}

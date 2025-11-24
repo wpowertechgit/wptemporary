@@ -125,7 +125,11 @@ const Technology = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <Typography variant="h2" sx={{ fontWeight: 700, mb: 3, color: 'var(--heading-color)' }}>
+              <Typography variant="h2" sx={{
+                fontWeight: 700, mb: 3, color: 'var(--heading-color)', '@media (min-width:2000px)': {
+                  fontSize: '5rem',
+                },
+              }}>
                 {t('how_it_works')}
               </Typography>
             </motion.div>
@@ -197,7 +201,11 @@ const Technology = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--card-text)' }}>
+              <Typography variant="h5" sx={{
+                fontWeight: 600, mb: 2, color: 'var(--card-text)', '@media (min-width:2000px)': {
+                  fontSize: '3rem',
+                },
+              }}>
                 <p>{t('molecular_disintegration')}</p>
               </Typography>
             </motion.div>
@@ -223,10 +231,18 @@ const Technology = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--card-text)' }}>
+              <Typography variant="h5" sx={{
+                fontWeight: 600, mb: 2, color: 'var(--card-text)', '@media (min-width:2000px)': {
+                  fontSize: '3rem',
+                },
+              }}>
                 {t('high_temp_thermal_decomposition')}
               </Typography>
-              <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--card-text)' }}>
+              <Typography variant="h5" sx={{
+                fontWeight: 600, mb: 2, color: 'var(--card-text)', '@media (min-width:2000px)': {
+                  fontSize: '3rem',
+                },
+              }}>
                 {t('benefits')}
               </Typography>
             </motion.div>

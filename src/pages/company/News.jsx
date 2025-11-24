@@ -76,6 +76,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '5rem',
+                            },
                         }}
                     >
                         {t('sust-1')}
@@ -87,6 +90,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('sust-2')}
@@ -98,6 +104,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('plusmission1')}
@@ -110,6 +119,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '5rem',
+                            },
                         }}
                     >
                         {t('plusmission2')}
@@ -121,6 +133,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('plusmission3')}
@@ -132,6 +147,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('plusmission4')}
@@ -144,6 +162,9 @@ const News = () => {
                             color: 'green',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '5rem',
+                            },
                         }}
                     >
                         {t('plusmission5')}
@@ -155,6 +176,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('plusmission6')}
@@ -167,6 +191,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '5rem',
+                            },
                         }}
                     >
                         {t('sust-3')}
@@ -179,6 +206,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '4rem',
+                            },
                         }}
                     >
                         {t('sust-5')}
@@ -190,6 +220,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('sust-6')}
@@ -202,6 +235,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '4rem',
+                            },
                         }}
                     >
                         {t('sust-7')}
@@ -213,6 +249,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('sust-8')}
@@ -225,6 +264,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '4rem',
+                            },
                         }}
                     >
                         {t('sust-9')}
@@ -236,6 +278,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('sust-10')}
@@ -248,6 +293,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '4rem',
+                            },
                         }}
                     >
                         {t('sust-11')}
@@ -259,6 +307,9 @@ const News = () => {
                             marginBottom: '1rem',
                             color: 'var(--card-text)',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '3rem',
+                            },
                         }}
                     >
                         {t('sust-12')}
@@ -271,6 +322,9 @@ const News = () => {
                             color: 'var(--heading-color)',
                             fontWeight: 'bold',
                             padding: '0 1rem',
+                            '@media (min-width:2000px)': {
+                                fontSize: '4rem',
+                            },
                         }}
                     >
                         {t('sust-13')}
@@ -322,7 +376,7 @@ const News = () => {
                                             maxWidth: '20rem',
                                         },
                                         '@media (min-width:2560px)': {
-                                            maxWidth: '18rem', // fits 3 in a row perfectly
+                                            maxWidth: '30rem', // fits 3 in a row perfectly
                                             padding: '0.8rem',
                                         },
                                         '&:hover': { transform: `scale(var(--card-hover-scale))` },
@@ -330,11 +384,19 @@ const News = () => {
                                     }}
                                 >
                                     <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                                        <Typography variant="h5" sx={{ fontWeight: 'bold', textAlign: 'center', color: 'var(--card-text)' }}>
+                                        <Typography variant="h5" sx={{
+                                            fontWeight: 'bold', textAlign: 'center', color: 'var(--card-text)', '@media (min-width:2000px)': {
+                                                fontSize: '3rem',
+                                            },
+                                        }}>
                                             {newsItem.title}
                                         </Typography>
                                         <Box sx={{ width: '100%', borderBottom: '2px solid var(--btn-primary-bg)', margin: '1rem 0' }} />
-                                        <Typography variant="body1" sx={{ textAlign: 'center', color: 'var(--card-text)' }}>
+                                        <Typography variant="body1" sx={{
+                                            textAlign: 'center', color: 'var(--card-text)', '@media (min-width:2000px)': {
+                                                fontSize: '2rem',
+                                            },
+                                        }}>
                                             {newsItem.paragraph}
                                         </Typography>
                                         <Box
@@ -346,6 +408,7 @@ const News = () => {
                                                 height: 'auto',
                                                 borderRadius: '8px',
                                                 marginTop: '1rem',
+
                                             }}
                                         />
                                     </Box>
@@ -363,6 +426,9 @@ const News = () => {
                                             '&:hover': {
                                                 backgroundColor: 'var(--btn-primary-bg-hover)',
                                                 boxShadow: `0 0.7rem 1.4rem var(--btn-primary-shadow-hover)`,
+                                            },
+                                            '@media (min-width:2000px)': {
+                                                fontSize: '2rem',
                                             },
 
                                         }}

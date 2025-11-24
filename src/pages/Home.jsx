@@ -80,7 +80,7 @@ const Home = () => {
             backgroundColor: 'rgba(0,0,0,0.5)',
             padding: isMobile ? '4vw' : '3rem',
             borderRadius: '1rem',
-            maxWidth: '35rem',
+            maxWidth: '50%',
             order: isMobile ? 2 : 0,
           }}
         >
@@ -90,10 +90,10 @@ const Home = () => {
               fontWeight: 700,
               lineHeight: 1.2,
               fontSize: { xs: '2rem', md: '2.8rem' },
-              '@media (min-width:2160px)': {
-                fontSize: '1.8rem',
+              '@media (min-width:2000px)': {
+                fontSize: '5rem',
 
-              }, maxWidth: { xs: '100%', md: '35rem', xl: '32rem' },
+              }
             }}
           >
             {t('homepage_title')}
@@ -106,7 +106,7 @@ const Home = () => {
               lineHeight: 1.5,
               fontWeight: 300,
               fontSize: { xs: '1rem', md: '1.2rem' }, '@media (min-width:2160px)': {
-                fontSize: '0.95rem',
+                fontSize: '4rem',
               },
             }}
           >
@@ -143,6 +143,9 @@ const Home = () => {
             marginBottom: '2rem',
             textAlign: 'center',
             zIndex: 1,
+            '@media (min-width:2160px)': {
+              fontSize: '5rem',
+            },
           }}
         >
           {t('homepage_intro')}
@@ -194,7 +197,10 @@ const Home = () => {
               color: 'var(--tech-title)',
               marginBottom: '1rem',
               fontSize: { xs: '2rem', md: '2.6rem' },
-              px: { xs: '1rem', md: 0 }, // small horizontal padding for mobile text
+              px: { xs: '1rem', md: 0 },
+              '@media (min-width:2160px)': {
+                fontSize: '7rem',
+              },
             }}
           >
             {t('technology')}
@@ -213,6 +219,10 @@ const Home = () => {
               lineHeight: 1.7,
               maxWidth: { xs: '90%', md: '38rem' },
               px: { xs: '1rem', md: 0 },
+              '@media (min-width:2160px)': {
+                fontSize: '3rem',
+                maxWidth: '50rem',
+              },
             }}
           >
             {t('learn_more_desc')}
@@ -230,6 +240,9 @@ const Home = () => {
               borderRadius: '0.5rem',
               backgroundColor: 'var(--tech-btn-bg)',
               '&:hover': { backgroundColor: 'var(--tech-btn-bg-hover)' },
+              '@media (min-width:2000px)': {
+                fontSize: '2.3rem',
+              },
             }}
           >
             {t('learn_more')}
@@ -258,6 +271,9 @@ const Home = () => {
               background: 'var(--page-bg)',
               boxShadow: '0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(0,0,0,0.4)',
               zIndex: 2,
+              '@media (min-width:2200px)': {
+                width: '100rem',
+              },
             }}
           >
             <iframe
@@ -304,14 +320,17 @@ const Home = () => {
               fontWeight: 700,
               marginBottom: '3rem',
               color: 'var(--heading-color)',
+              '@media (min-width:2000px)': {
+                fontSize: '4rem',
+              },
             }}
           >
             {t('latest_news')}
           </Typography>
 
           <Grid2 container spacing={4} justifyContent="center" sx={{
-            marginBottom: '4rem', '@media (min-width:2560px)': {
-              gap: '2rem',
+            marginBottom: '4rem', '@media (min-width:2060px)': {
+              gap: '5rem',
             },
           }}>
             {newsArray.map((newsItem, index) => (
@@ -322,10 +341,6 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true, amount: 0.3 }}
-                xs={12}
-                sm={6}
-                md={4}
-                lg={3}
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -338,10 +353,10 @@ const Home = () => {
                   boxShadow: `0 0.5rem 1rem var(--card-shadow)`,
                   maxWidth: '22rem',
                   '@media (min-width:1920px)': {
-                    maxWidth: '20rem',
+                    maxWidth: '25rem',
                   },
                   '@media (min-width:2560px)': {
-                    maxWidth: '18rem', // fits 3 in a row perfectly
+                    maxWidth: '40rem', // fits 3 in a row perfectly
                     padding: '0.8rem',
                   },
                   '&:hover': { transform: `scale(var(--card-hover-scale))` },
@@ -349,7 +364,11 @@ const Home = () => {
                 }}
               >
                 <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                  <Typography variant="h5" sx={{ fontWeight: 'bold', textAlign: 'center', color: 'var(--card-text)' }}>
+                  <Typography variant="h5" sx={{
+                    fontWeight: 'bold', textAlign: 'center', color: 'var(--card-text)', '@media (min-width:2000px)': {
+                      fontSize: '2.3rem',
+                    },
+                  }}>
                     {newsItem.title}
                   </Typography>
                   <Box
@@ -359,7 +378,11 @@ const Home = () => {
                       margin: '1rem 0',
                     }}
                   />
-                  <Typography variant="body1" sx={{ textAlign: 'center', color: 'var(--card-text)' }}>
+                  <Typography variant="body1" sx={{
+                    textAlign: 'center', color: 'var(--card-text)', '@media (min-width:2000px)': {
+                      fontSize: '2rem',
+                    },
+                  }}>
                     {newsItem.paragraph}
                   </Typography>
                   <Box
@@ -389,6 +412,9 @@ const Home = () => {
                       backgroundColor: 'var(--btn-primary-bg-hover)',
                       boxShadow: `0 0.7rem 1.4rem var(--btn-primary-shadow-hover)`,
                     },
+                    '@media (min-width:2000px)': {
+                      fontSize: '2.2rem',
+                    },
                   }}
                 >
                   {t('learn_more')}
@@ -413,6 +439,9 @@ const Home = () => {
               '&:hover': {
                 backgroundColor: 'var(--btn-primary-bg-hover)',
                 boxShadow: `0 0.7rem 1.4rem var(--btn-primary-shadow-hover)`,
+              },
+              '@media (min-width:2000px)': {
+                fontSize: '2.3rem',
               },
             }}
           >

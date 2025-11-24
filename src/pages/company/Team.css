@@ -204,3 +204,25 @@ h1.team-name {
     font-size: 0.85em;
   }
 }
+
+@media (min-width:2000px) {
+  .team-name {
+    font-size: 4em;
+  }
+
+  .team-position {
+    font-size: 4em;
+  }
+
+  .team-contact {
+    font-size: 4em;
+  }
+
+  a {
+    font-size: 3em;
+  }
+
+  .team-title {
+    font-size: 7em;
+  }
+}

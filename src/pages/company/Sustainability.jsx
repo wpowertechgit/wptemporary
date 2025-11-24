@@ -152,11 +152,19 @@ const Sustainability = () => {
             {/* composite (sust-23..26) vs normal */}
             {!section.composite ? (
               <>
-                <Typography variant="h4" sx={{ fontWeight: 700, mb: 1.5, color: 'var(--heading-color)' }}>
+                <Typography variant="h4" sx={{
+                  fontWeight: 700, mb: 1.5, color: 'var(--heading-color)', '@media (min-width:2000px)': {
+                    fontSize: '5rem',
+                  },
+                }}>
                   {section.title}
                 </Typography>
                 {section.paragraphs?.map((p, i) => (
-                  <Typography key={i} variant="body1" sx={{ mb: 1.5, fontSize: '1.08rem', color: 'var(--card-text)' }}>
+                  <Typography key={i} variant="body1" sx={{
+                    mb: 1.5, fontSize: '1.08rem', color: 'var(--card-text)', '@media (min-width:2000px)': {
+                      fontSize: '2.3rem',
+                    },
+                  }}>
                     {p}
                   </Typography>
                 ))}
@@ -165,10 +173,18 @@ const Sustainability = () => {
               <>
                 {section.blocks.map((b, i) => (
                   <Box key={i} sx={{ mb: i === section.blocks.length - 1 ? 0 : 2.5 }}>
-                    <Typography variant="h4" sx={{ fontWeight: 700, mb: 1, color: 'var(--heading-color)' }}>
+                    <Typography variant="h4" sx={{
+                      fontWeight: 700, mb: 1, color: 'var(--heading-color)', '@media (min-width:2000px)': {
+                        fontSize: '5rem',
+                      },
+                    }}>
                       {b.title}
                     </Typography>
-                    <Typography variant="body1" sx={{ fontSize: '1.08rem', color: 'var(--card-text)' }}>
+                    <Typography variant="body1" sx={{
+                      fontSize: '1.08rem', color: 'var(--card-text)', '@media (min-width:2000px)': {
+                        fontSize: '2.3rem',
+                      },
+                    }}>
                       {b.text}
                     </Typography>
                   </Box>
@@ -220,7 +236,10 @@ const Sustainability = () => {
               fontWeight: 700,
               mb: 2,
               textAlign: 'center',
-              color: 'var(--heading-color)', // optional: echoes the separator color
+              color: 'var(--heading-color)', // optional: echoes the separator color,
+              '@media (min-width:2000px)': {
+                fontSize: '3rem',
+              },
             }}
           >
             {t('sust-27') || ''}
