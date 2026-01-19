@@ -7,6 +7,12 @@ export const useNewsData = () => {
 
   const newsArray = [
     {
+      title: t('news8.title'),
+      paragraph: t('news8.paragraph'),
+      image: images.news8,
+      link: 'https://stirileprotv.ro/stiri/actualitate/o-instalatie-din-cluj-ar-putea-alimenta-orasul-in-caz-de-avarie-deseurile-pot-fi-transformate-in-electricitate-si-caldura.html',
+    },
+    {
       title: t('news7.title'),
       paragraph: t('news7.paragraph'),
       image: images.news7,

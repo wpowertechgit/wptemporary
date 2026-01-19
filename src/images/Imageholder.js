@@ -132,8 +132,10 @@ import sustainillustration4 from './sustainillustration4.png';
 import sustainillustration5 from './sustainillustration5.png';
 import sustainillustration6 from './sustainillustration6.png';
 import mappreview from './map-preview.png';
+import news8 from './news8.jpg';
 
 const images = {
+  news8,
   mappreview,
   sustainillustration1,
   sustainillustration2,
