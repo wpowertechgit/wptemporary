@@ -221,7 +221,7 @@ const FFooter = () => {
           },
         }}
       >
-        All rights reserved © 2025 Waste Powertech
+        All rights reserved © 2026 Waste Powertech
       </Typography>
     </Box>
   );
