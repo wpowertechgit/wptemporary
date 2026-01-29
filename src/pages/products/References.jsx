@@ -6,6 +6,7 @@ import { PiPlantFill, PiWarningDiamondFill } from "react-icons/pi";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import { CustomPrevButton, CustomNextButton } from '../../components/CustomButtons';
 
@@ -32,9 +33,9 @@ const LazyGallery = ({ imageArray, isVisible }) => {
     const createCarouselItems = () => (
         imageArray.map((src, index) => (
             <div className="gallery-item" key={index}>
-                <img 
-                    src={src} 
-                    alt={`Gallery ${index}`} 
+                <img
+                    src={src}
+                    alt={`Gallery ${index}`}
                     onClick={() => handleImageClick(index)}
                     style={{ cursor: 'pointer' }}
                 />
@@ -44,10 +45,10 @@ const LazyGallery = ({ imageArray, isVisible }) => {
 
     if (!isLoaded) {
         return (
-            <div className="gallery-placeholder" style={{ 
-                height: '300px', 
-                display: 'flex', 
-                alignItems: 'center', 
+            <div className="gallery-placeholder" style={{
+                height: '300px',
+                display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: '#f0f0f0',
                 color: '#666'
@@ -71,6 +72,18 @@ const LazyGallery = ({ imageArray, isVisible }) => {
                 close={() => setLightboxOpen(false)}
                 index={lightboxIndex}
                 slides={imageArray.map((src) => ({ src }))}
+                plugins={[Zoom]}
+                zoom={{
+                    maxZoomPixelRatio: 3,
+                    zoomInMultiplier: 2,
+                    doubleTapDelay: 300,
+                    doubleClickDelay: 300,
+                    doubleClickMaxStops: 2,
+                    keyboardMoveDistance: 50,
+                    wheelZoomDistanceFactor: 100,
+                    pinchZoomDistanceFactor: 100,
+                    scrollToZoom: false
+                }}
                 styles={{
                     container: { backgroundColor: 'rgba(0, 0, 0, 0.7)' }
                 }}
@@ -109,18 +122,18 @@ const References = () => {
     const { t } = useTranslation();
     const urbanRef = useRef(null);
     const industryRef = useRef(null);
-    
+
     const clujGalleryRef = useRef(null);
     const tarnaveniGalleryRef = useRef(null);
     const prototypeGalleryRef = useRef(null);
-    
+
     const isClujVisible = useIntersectionObserver(clujGalleryRef);
     const isTarnaveniVisible = useIntersectionObserver(tarnaveniGalleryRef);
     const isPrototypeVisible = useIntersectionObserver(prototypeGalleryRef);
-    
+
     const imageSources = {
         tarnaveni: [
-            images.Wpowertech2, 
+            images.Wpowertech2,
             images.Wpowertech1,
             images.news3,
             images.tarnaveni2,
@@ -189,20 +202,20 @@ const References = () => {
         satumare: [images.inConstruction],
         prototype: [images.tarnaveni1],
     };
-    
+
     return (
         <div className='references-page'>
             <div className="hero-section">
                 <div className="reference-box">
-                <img src={images.refBackground} alt="Background" className="background-image" />
+                    <img src={images.refBackground} alt="Background" className="background-image" />
                     <h1>{t('references')}</h1>
                     <div className="button-container">
                         <div className="button-background"></div>
                         <button onClick={() => urbanRef.current?.scrollIntoView({ behavior: 'smooth' })}>
-                            <FaTrash /><br/>{t('urban-waste')}
+                            <FaTrash /><br />{t('urban-waste')}
                         </button>
                         <button onClick={() => industryRef.current?.scrollIntoView({ behavior: 'smooth' })}>
-                            <FaIndustry /><br/>{t('industrial-waste')}
+                            <FaIndustry /><br />{t('industrial-waste')}
                         </button>
                     </div>
                 </div>
@@ -217,8 +230,8 @@ const References = () => {
                             {t('desc-cluj')}
                         </div>
                         <div className="gallery" ref={clujGalleryRef}>
-                            <LazyGallery 
-                                imageArray={imageSources.cluj} 
+                            <LazyGallery
+                                imageArray={imageSources.cluj}
                                 isVisible={isClujVisible}
                             />
                         </div>
@@ -234,8 +247,8 @@ const References = () => {
                             {t('desc-tarnaveni')}
                         </div>
                         <div className="gallery" ref={tarnaveniGalleryRef}>
-                            <LazyGallery 
-                                imageArray={imageSources.tarnaveni} 
+                            <LazyGallery
+                                imageArray={imageSources.tarnaveni}
                                 isVisible={isTarnaveniVisible}
                             />
                         </div>
@@ -248,8 +261,8 @@ const References = () => {
                             {t('prototype')}
                         </div>
                         <div className="gallery" ref={prototypeGalleryRef}>
-                            <LazyGallery 
-                                imageArray={imageSources.prototype} 
+                            <LazyGallery
+                                imageArray={imageSources.prototype}
                                 isVisible={isPrototypeVisible}
                             />
                         </div>

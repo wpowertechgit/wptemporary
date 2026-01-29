@@ -268,7 +268,37 @@ header {
   }
 
   .nav-links li button {
+    font-size: 2.2rem;
+    padding: 0.8rem 0.8rem;
+    line-height: 1.3;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .lang-container button {
+    font-size: 1.3rem;
+    padding: 6px 12px;
+  }
+
+  .nav-links li .dropdown-content button {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  .navbar {
+    height: 11vh;
+  }
+
+  .logo img {
+    top: -6rem;
+    height: 10vh;
+  }
+
+  .nav-links li button {
+    font-size: 3rem;
     padding: 0.8rem 0.8rem;
     line-height: 1.3;
   }
@@ -283,6 +313,6 @@ header {
   }
 
   .nav-links li .dropdown-content button {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 }

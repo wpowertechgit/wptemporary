@@ -62,6 +62,26 @@ const ScrollToTop = () => {
               backgroundColor: "#45a049",
             },
             zIndex: 1000,
+            // Default size
+            width: 40,
+            height: 40,
+            // Larger size for larger screens
+            '@media (min-width:1400px)': {
+              width: 60,  // Wider
+              height: 60, // Taller
+              fontSize: '1.5rem', // Larger icon
+              right: 50,  // Slightly more right padding
+            },
+            '@media (min-width:2560px)': {
+              width: 80,  // Even larger for 4K
+              height: 80,
+              fontSize: '2rem',
+              right: 70,  // More right padding
+            },
+            // Ensure icon scales with button
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
           size="small"
           aria-label="scroll to top"
