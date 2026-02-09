@@ -122,7 +122,7 @@ import teammember6 from './teammember6.png';
 import ISO_9001 from './ISO_9001.png';
 import ISO_14001 from './ISO_14001.png';
 import news7 from './news7.jpg';
-import wpstatie from './wp_statie.jpeg';
+import wpstatie from './wp_statie.jpg';
 import wplandfill from './wp_landfill.jpeg';
 import wastegoingdown from './wastegoingdown.jpeg';
 import sustainillustration1 from './sustainillustration1.png';

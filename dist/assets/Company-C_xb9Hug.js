@@ -1,0 +1,1 @@
+import{u as a,j as s}from"./index-CBRBoOWe.js";const e=()=>{const{t:n}=a();return s.jsxs("div",{className:"company-page",children:[s.jsx("h1",{children:n("company")}),s.jsx("p",{children:n("company_description")})]})};export{e as default};

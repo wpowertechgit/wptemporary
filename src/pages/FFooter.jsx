@@ -72,7 +72,7 @@ const FFooter = () => {
             <FaEnvelope /> office@wpowertech.ro
           </Typography>
           <Link
-            href="https://www.facebook.com/profile.php?id=61559358922953"
+            href="https://www.facebook.com/people/Waste-Powertech-SRL/61559358922953/"
             sx={{
               color: 'var(--footer-text)',
               mt: '0.25rem',
