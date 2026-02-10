@@ -103,7 +103,7 @@ const Contact = () => {
               </Typography>
 
               <a
-                href="https://www.facebook.com/profile.php?id=61559358922953"
+                href="https://www.facebook.com/people/Waste-Powertech-SRL/61559358922953/"
                 style={{
                   color: "var(--contact-link)",
                   textDecoration: "none",
